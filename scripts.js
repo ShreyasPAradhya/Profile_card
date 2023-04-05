@@ -1,17 +1,17 @@
 let elem = document.querySelector('.container');
-// var store_1=elem.style.color;
+
 elem.addEventListener('mouseover',changecolor);
 elem.addEventListener('mouseout',function(){
-    // document.querySelector('.container').style.color = store_1;
+
     document.querySelector('.container').style.boxShadow = "0.625rem 0.625rem 0.625rem 0.625rem #0bc4b1";
-    // document.querySelector('.container').style.border= 'none';
+   
 });
 console.log('hello');
 function changecolor() {
     // console.log('hello1');
     // document.querySelector('.container').style.color = 'red';
     elem.style.boxShadow = '0 0 0.725rem #0bc4b1';
-    // elem.style.border = '2px solid #0bc4b1';
+  
 
 
 }
@@ -19,11 +19,11 @@ function changecolor() {
 
 
 (function() {
-    // Init
+
     var outer = document.getElementById("outer"),
       container = document.getElementById("container");
   
-    // Mouse
+
     var mouse = {
       _x: 0,
       _y: 0,
@@ -43,10 +43,10 @@ function changecolor() {
       }
     };
   
-    // Track the mouse position relative to the center of the container.
+   
     mouse.setOrigin(outer);
   
-    //-----------------------------------------
+ 
   
     var counter = 0;
     var updateRate = 10;
@@ -54,7 +54,7 @@ function changecolor() {
       return counter++ % updateRate === 0;
     };
   
-    //-----------------------------------------
+    
   
     var onMouseEnterHandler = function(event) {
       update(event);
@@ -70,7 +70,7 @@ function changecolor() {
       }
     };
   
-    //-----------------------------------------
+   
   
     var update = function(event) {
       mouse.updatePosition(event);
@@ -89,7 +89,7 @@ function changecolor() {
       container.style.oTransform = style;
     };
   
-    //-----------------------------------------
+    
   
     outer.onmouseenter = onMouseEnterHandler;
     outer.onmouseleave = onMouseLeaveHandler;
